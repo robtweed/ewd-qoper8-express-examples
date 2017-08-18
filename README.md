@@ -100,12 +100,12 @@ Try using a REST client (eg the Chrome Advanced REST Client extension), and POST
 You should get a response back such as this:
 ```json
 {
- “type":"HTTPMessage",
- “finished":true,
- “message":{
- “youSent":{
- “type":"HTTPMessage",
- “a":"hello"
+ "type":"HTTPMessage",
+ "finished":true,
+ "message":{
+ "youSent":{
+ "type":"HTTPMessage",
+ "a":"hello"
  },
  "workerSent":"hello from worker 13809”,
  "time":"Fri Feb 19 2016 02:02:33 GMT+0000 (GMT)”
@@ -326,7 +326,7 @@ q.start();
 
 POSTing a /qoper8 URL will send an ewd-qoper8-epress formatted message to the worker module (express-module2).
 
-However, sending /qoper8/test as a GET request will generate a manually-constructed message with a type of 'non-express-message' which will be handled as differently within the worker module. Sending /qoper8/fail as a GET request will return a “No handler found' error response.
+However, sending /qoper8/test as a GET request will generate a manually-constructed message with a type of 'non-express-message' which will be handled as differently within the worker module. Sending /qoper8/fail as a GET request will return a "No handler found' error response.
 
 
 ## <a id="toe-sending-error-responses-from-your-worker-module"></a>Sending Error Responses from your Worker Module
@@ -343,7 +343,7 @@ finished(response);
 
 Express will send out an error response with an HTTP status code of 400 with the JSON payload:
 ```json
-{“error”: “Some error message”}
+{"error": "Some error message"}
 ```
 
 If you want Express to use a different status code, simply define it in the response as in this example that generates a status code of 500:
@@ -552,7 +552,7 @@ For simplicity, this example uses the same worker module as before that just ech
 socket.emit('my-response', resultObj);
 ```
 
-In order to test this example, you need to load an HTML file - there's one already created in the /examples folder (index.html). If you start the express6.js script and put the following URL into a browser: <http://192.168.1.193:8080/> (change the IP address as appropriate), it should load the index.html page. This loads the client-side socket.io library and otherwise just contains a button that contains the text “Click Me”:
+In order to test this example, you need to load an HTML file - there's one already created in the /examples folder (index.html). If you start the express6.js script and put the following URL into a browser: <http://192.168.1.193:8080/> (change the IP address as appropriate), it should load the index.html page. This loads the client-side socket.io library and otherwise just contains a button that contains the text "Click Me”:
 ```html
 <html>
 <head>
