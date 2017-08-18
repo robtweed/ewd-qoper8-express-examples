@@ -1,0 +1,37 @@
+{
+  "name": "ewd-qoper8-express-examples",
+  "version": "0.0.0",
+  "description": "ewd-qoper8 express examples",
+  "keywords": [
+    "example",
+    "express",
+    "ewd-qoper8"
+  ],
+  "scripts": {
+    "lint": "jshint examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robtweed/ewd-qoper8-express-examples.git"
+  },
+  "author": "Rob Tweed, M/Gateway Developments Ltd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/robtweed/ewd-qoper8-express-examples/issues"
+  },
+  "homepage": "https://github.com/robtweed/ewd-qoper8-express-examples#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ewd-qoper8": "^3.13.0",
+    "ewd-qoper8-express": "^3.17.0",
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
