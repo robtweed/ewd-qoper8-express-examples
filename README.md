@@ -484,7 +484,7 @@ will return a response similar to this:
       "cookie": "state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM%3A0%2C0; Username=UnknownUser"
     },
     "params": {
-      0: "a/b",
+      "0": "a/b",
       "type":"testing"
     },
     "query": {
