@@ -107,8 +107,8 @@ You should get a response back such as this:
  "type":"HTTPMessage",
  "a":"hello"
  },
- "workerSent":"hello from worker 13809”,
- "time":"Fri Feb 19 2016 02:02:33 GMT+0000 (GMT)”
+ "workerSent":"hello from worker 13809Э",
+ "time":"Fri Feb 19 2016 02:02:33 GMT+0000 (GMT)"
  }
 }
 ```
