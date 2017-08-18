@@ -469,35 +469,35 @@ So, for example, a GET request to /qoper8/testing/a/b?hello=world
 will return a response similar to this:
 ```json
 {
- "youSent": {
- "type": "ewd-qoper8-express"
- "path": "/qoper8/testing/a/b?hello=world"
- "method": "GET"
- "headers": {
- "host": "192.168.1.188:8080"
- "connection": "keep-alive"
- "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36
+ "youSent":{
+ "type":"ewd-qoper8-express"
+ "path":"/qoper8/testing/a/b?hello=world"
+ "method":"GET"
+ "headers":{
+ "host":"192.168.1.188:8080"
+ "connection":"keep-alive"
+ "user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36
 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36"
- "authorization": "f0906e12-10de-4cfc-a5e6-eaf4430d6764"
- "accept": "*/*"
- "accept-encoding": "gzip, deflate, sdch"
- "accept-language": "en-US,en;q=0.8"
- "cookie": "state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM
+ "authorization":"f0906e12-10de-4cfc-a5e6-eaf4430d6764"
+ "accept":"*/*"
+ "accept-encoding":"gzip, deflate, sdch"
+ "accept-language":"en-US,en;q=0.8"
+ "cookie":"state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM
 %3A0%2C0; Username=UnknownUser"
  } -
- "params": {
+ "params":{
  0: "a/b"
- "type": "testing"
+ "type":"testing"
  } -
- "query": {
+ "query":{
  "hello": "world"
  } -
- "body": {}
- "application": "qoper8"
- "expressType": "testing"
+ "body":{}
+ "application":"qoper8"
+ "expressType":"testing"
  } -
- "workerSent": "hello from worker 13859"
- "time": "Wed Mar 02 2016 08:45:24 GMT+0000 (GMT)"
+ "workerSent":"hello from worker 13859"
+ "time":"Wed Mar 02 2016 08:45:24 GMT+0000 (GMT)"
 }
 ```
 Notice that the path element following the /qoper8 root is available to you in your worker module message handler as `messageObj.params.type`. The /x/y elements are available in
