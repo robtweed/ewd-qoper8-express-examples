@@ -474,17 +474,17 @@ will return a response similar to this:
     "path": "/qoper8/testing/a/b?hello=world",
     "method": "GET",
     "headers": {
-      "host": "192.168.1.188:8080"
-      "connection": "keep-alive"
-      "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36"
-      "authorization": "f0906e12-10de-4cfc-a5e6-eaf4430d6764"
-      "accept": "*/*"
-      "accept-encoding": "gzip, deflate, sdch"
-      "accept-language": "en-US,en;q=0.8"
+      "host": "192.168.1.188:8080",
+      "connection": "keep-alive",
+      "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36",
+      "authorization": "f0906e12-10de-4cfc-a5e6-eaf4430d6764",
+      "accept": "*/*",
+      "accept-encoding": "gzip, deflate, sdch",
+      "accept-language": "en-US,en;q=0.8",
       "cookie": "state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM%3A0%2C0; Username=UnknownUser"
     },
     "params": {
-      0: "a/b"
+      0: "a/b",
       "type":"testing"
     },
     "query": {
