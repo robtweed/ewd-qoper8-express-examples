@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/robtweed/ewd-qoper8-express-examples#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "ewd-qoper8": "^3.13.0",
-    "ewd-qoper8-express": "^3.17.0",
-    "express": "^4.15.4",
-    "socket.io": "^2.0.3"
+    "body-parser": "^1.18.2",
+    "ewd-qoper8": "^3.16.0",
+    "ewd-qoper8-express": "^3.22.0",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "jshint": "^2.9.5",

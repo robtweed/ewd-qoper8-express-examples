@@ -100,16 +100,16 @@ Try using a REST client (eg the Chrome Advanced REST Client extension), and POST
 You should get a response back such as this:
 ```json
 {
- "type":"HTTPMessage",
- "finished":true,
- "message":{
- "youSent":{
- "type":"HTTPMessage",
- "a":"hello"
- },
- "workerSent":"hello from worker 13809Э",
- "time":"Fri Feb 19 2016 02:02:33 GMT+0000 (GMT)"
- }
+  "type": "HTTPMessage",
+  "finished": true,
+  "message": {
+    "youSent": {
+      "type": "HTTPMessage",
+      "a": "hello"
+    },
+    "workerSent": "hello from worker 13809Э",
+    "time": "Fri Feb 19 2016 02:02:33 GMT+0000 (GMT)"
+  }
 }
 ```
 
@@ -170,34 +170,32 @@ This example is using the same worker module as before, so it should just echo b
 Start up the express2.js example and try POST'ing the same request as before. You should get a response back such as this:
 ```json
 {
- "youSent": {
- "type": "ewd-qoper8-express",
- "path": "/qoper8",
- "method": "POST",
- "headers": {
- "host": "192.168.1.188:8080",
- "connection": "keep-alive",
- "content-length": "44",
- "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/
-537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36",
- "origin": "chrome-extension://hgmloofddffdnphfgcellkdfbfbjeloo",
- "authorization": "f0906e12-10de-4cfc-a5e6-eaf4430d6764",
- "content-type": "application/json",
- "accept": "*/*",
- "accept-encoding": "gzip, deflate",
- "accept-language": "en-US,en;q=0.8",
- "cookie": "state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM
-%3A0%2C0; Username=UnknownUser"
- },
- "params": {},
- "query": {},
- "body": {
- "type": "HTTPMessage",
- "a": "hello"
- }
- },
- "workerSent": "hello from worker 13684",
- "time": "Wed Mar 02 2016 06:33:35 GMT+0000 (GMT)"
+  "youSent": {
+    "type": "ewd-qoper8-express",
+    "path": "/qoper8",
+    "method": "POST",
+    "headers": {
+      "host": "192.168.1.188:8080",
+      "connection": "keep-alive",
+      "content-length": "44",
+      "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36",
+      "origin": "chrome-extension://hgmloofddffdnphfgcellkdfbfbjeloo",
+      "authorization": "f0906e12-10de-4cfc-a5e6-eaf4430d6764",
+      "content-type": "application/json",
+      "accept": "*/*",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "en-US,en;q=0.8",
+      "cookie": "state-666E1C02-315E-11E5-8917-0C29C5382300=SYSADM%3A0%2C0; Username=UnknownUser"
+    },
+    "params": {},
+    "query": {},
+    "body": {
+      "type": "HTTPMessage",
+      "a": "hello"
+    }
+  },
+  "workerSent": "hello from worker 13684",
+  "time": "Wed Mar 02 2016 06:33:35 GMT+0000 (GMT)"
 }
 ```
 You can see at once that the message that was constructed from Express's req object is much more complex than before (see the youSent part of the message, shown in bold):
@@ -324,7 +322,7 @@ q.start();
 
 ```
 
-POSTing a /qoper8 URL will send an ewd-qoper8-epress formatted message to the worker module (express-module2).
+POSTing a /qoper8 URL will send an ewd-qoper8-express formatted message to the worker module (express-module2).
 
 However, sending /qoper8/test as a GET request will generate a manually-constructed message with a type of 'non-express-message' which will be handled as differently within the worker module. Sending /qoper8/fail as a GET request will return a "No handler found' error response.
 
@@ -582,15 +580,15 @@ In order to test this example, you need to load an HTML file - there's one alrea
 When the button is clicked it will send a web socket message to Express/socket.io, and will show the returned response web socket message in the browser's Javascript console. It should look something like this:
 ```json
 ewd-qoper8 message received: {
- "type": "testSocketRequest",
- "message": {
- "youSent": {
- "type": "testSocketRequest",
- "hello": "world"
- },
- "workerSent": "hello from worker 13912",
- "time": "Wed Mar 02 2016 09:04:38 GMT+0000 (GMT)"
- }
+  "type": "testSocketRequest",
+  "message": {
+    "youSent": {
+      "type": "testSocketRequest",
+      "hello": "world"
+    },
+    "workerSent": "hello from worker 13912",
+    "time": "Wed Mar 02 2016 09:04:38 GMT+0000 (GMT)"
+  }
 }
 ```
 
@@ -619,22 +617,22 @@ module.exports = function () {
 This time, every time the button is clicked in the index.html file, you should see two messages arriving in the browser's JavaScript console:
 ```json
 ewd-qoper8 message received: {
- "type": "testSocketRequest",
- "message": {
- "intermediate": "message",
- "text": "With websockets you can send multiple messages to the browser!"
- }
+  "type": "testSocketRequest",
+  "message": {
+    "intermediate": "message",
+    "text": "With websockets you can send multiple messages to the browser!"
+  }
 }
 ewd-qoper8 message received: {
- "type": "testSocketRequest",
- "message": {
- "youSent": {
- "type": "testSocketRequest",
- "hello": "world"
- },
- "workerSent": "hello from worker 13943",
- "time": "Wed Mar 02 2016 09:16:00 GMT+0000 (GMT)"
- }
+  "type": "testSocketRequest",
+  "message": {
+    "youSent": {
+      "type": "testSocketRequest",
+      "hello": "world"
+    },
+    "workerSent": "hello from worker 13943",
+    "time": "Wed Mar 02 2016 09:16:00 GMT+0000 (GMT)"
+  }
 }
 ```
 Intermediate messages should be sent using the `send()` function to ensure that the master process doesn't return the child process to the available pool.
